@@ -1,0 +1,69 @@
+{% extends "blueprint.html" %}
+{% block body %}
+
+
+
+<script src="{{ url_for('static', filename='signup_doctor.js') }}"></script>
+
+
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <!--<div class="card-heading"></div>-->
+
+                <div class="card-body">
+                    <h2 class="title">Doctor's Registration Form </h2>
+                    <form method="POST" id="signupForm">
+                        <div class="input-group">
+                            <span style="color:red"id="nameError"></span>
+                            <input class="input--style-1" type="text"  placeholder="Name" id="name" maxlength=50 name="name" required />
+
+                        </div>
+                        
+                        <div class="input-group">
+                            <p style="color:red"id="emailError"></p>
+                            <input class="input--style-1" type="email" placeholder="Email" id="email" name="email" required />
+                        </div>
+                        
+
+                        <div class="input-group">
+                            
+                        <p style="color:red"id="usernameError"></p>
+
+                            <input class="input--style-1" type="text"  id= "username" maxlength=10 name="username" required
+                            placeholder="Username"  />
+                        </div>
+        
+                        <p style="color:red" id="passwordError"></p>                
+                        <div class="input-group">
+                            <input class="input--style-1" type="password" placeholder="Password" id="password" name="password" required />
+                        </div>
+        
+  
+                        <div class="input-group">
+                            <input class="input--style-1" type="password" placeholder="Confirm Password" id="confirmPassword" name="confirmPassword" required/>
+                        </div>
+              
+                        <div class="p-t-20">
+                            
+                           <!--<input type="button" class="btn btn-info btn-lg" >Submit</input>-->
+                           <button id="submitForm" type="button" class="btn btn-info btn-lg" >Register</button>
+
+                        
+                        </div>
+                    </form>
+                    <div>
+                        <br>
+                        <ul>
+                            <li> Username should be between 5 to 10 characters No special Characters Allowed</li><br>
+                            <li> Password should contain atleast one Capital Alphabet, one Numeric and one Special Character. Password cannot start with special character</li>
+
+                        
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+   {% endblock %}

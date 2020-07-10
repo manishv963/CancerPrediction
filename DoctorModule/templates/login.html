@@ -1,0 +1,49 @@
+{% extends "blueprint.html" %}
+{% block body %}
+<script src="{{ url_for('static', filename='login.js') }}"></script>
+
+<body>
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <!--<div class="card-heading"></div>-->
+
+                <div class="card-body">
+                    <h2 class="title">Sign In </h2>
+                    <form method="POST" id="signupForm">
+                        
+                        
+  
+                        <div class="input-group">
+                            
+                        
+
+                            <input class="input--style-1" type="text"  id= "usernameLogin" maxlength=10 name="username" required
+                            placeholder="Username"  />
+                        </div>
+        
+                        
+                        <div class="input-group">
+                            <input class="input--style-1" type="password" placeholder="Password" id="passwordLogin" name="password" required />
+                        </div>
+        
+                  <div class="p-t-20">
+                            
+                           <!--<input type="button" class="btn btn-info btn-lg" >Submit</input>-->
+                           <button id="submitLoginForm" type="button" class="btn btn-info btn-lg" >Login</button>
+
+                        
+                        </div>
+                    </form>
+                    <div>
+                        <br>
+                          <h3 style="font-size: larger;">Not a Registered Doctor?<a href="/signup">  Click here to Sign Up</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+ 
+</body>
+
+{% endblock %}
